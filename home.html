@@ -1,57 +1,97 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>BLUE | Dê voz ao conhecimento</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
+    <title>BLUE | Dê voz ao conhecimento</title>
 
-<script src="logo_blue.png"></script>
+    <link rel="stylesheet" href="style.css">
 
-</head><body><header>
-    <img src="assets/logo_blue.png" width="90" alt="Logo BLUE">
+    <!-- Biblioteca para gerar PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
 
-    <div>
-        Olá, estudante!
-        <button onclick="logout()">Sair</button>
-    </div>
-</header>
+<body>
 
-<main>
-    <section class="card">
-        <h2>🎤 Gravação e transcrição</h2>
+    <!-- CABEÇALHO -->
+    <header>
 
-        <button onclick="iniciarGravacao()">Iniciar gravação</button>
-        <button onclick="pararGravacao()">Parar gravação</button>
+        <img
+            src="assets/logo_blue.png"
+            alt="Logo BLUE"
+            class="logo"
+        >
 
-        <textarea
-            id="textoAula"
-            placeholder="A transcrição da aula aparecerá aqui..."
-        ></textarea>
-    </section>
+        <div>
+            <span>Olá, estudante!</span>
+            <button onclick="logout()">Sair</button>
+        </div>
 
-    <section class="card">
-        <h2>📚 Material de estudo</h2>
+    </header>
 
-        <p>
-            Gere um resumo e um mapa mental usando o texto
-            que já foi transcrito.
-        </p>
+    <main>
 
-        <button id="btnGerar" onclick="gerarEstudo()">
-            ✨ Gerar resumo e mapa mental
-        </button>
+        <!-- GRAVAÇÃO E TRANSCRIÇÃO -->
+        <section class="card">
 
-        <div id="resultado" aria-live="polite"></div>
-    </section>
+            <h2>🎤 Gravação e transcrição</h2>
 
-    <section class="card">
-        <h2>📄 Exportar PDF</h2>
+            <button onclick="iniciarGravacao()">
+                Iniciar gravação
+            </button>
 
-        <button onclick="gerarPDF()">Baixar material</button>
-    </section>
-</main>
+            <button onclick="pararGravacao()">
+                Parar gravação
+            </button>
 
-<script src="script.js"></script>
+            <textarea
+                id="textoAula"
+                placeholder="A transcrição da aula aparecerá aqui..."
+            ></textarea>
+
+        </section>
+
+        <!-- MATERIAL DE ESTUDO -->
+        <section class="card">
+
+            <h2>📚 Material de estudo</h2>
+
+            <p>
+                Gere um resumo e um mapa mental usando
+                o texto que já foi transcrito.
+            </p>
+
+            <button
+                id="btnGerar"
+                onclick="gerarEstudo()"
+            >
+                ✨ Gerar resumo e mapa mental
+            </button>
+
+            <div id="resultado" aria-live="polite"></div>
+
+        </section>
+
+        <!-- EXPORTAR PDF -->
+        <section class="card">
+
+            <h2>📄 Exportar PDF</h2>
+
+            <p>
+                Salve seu material de estudo para revisar depois.
+            </p>
+
+            <button onclick="gerarPDF()">
+                Baixar material
+            </button>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
