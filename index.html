@@ -1,40 +1,52 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>BLUE — Dê voz ao conhecimento</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
+    <title>BLUE — Dê voz ao conhecimento</title>
 
-</head><body><div class="login-container">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <img src="assets/escola.png" width="160" alt="Logo da escola">
+<body>
 
-    <h1>BLUE</h1>
-    <h3>Dê voz ao conhecimento</h3>
+    <div class="login-container">
 
-    <input
-        type="text"
-        id="usuario"
-        placeholder="Usuário"
-        autocomplete="username"
-    >
+        <img
+            src="assets/logo_blue.png"
+            alt="Logo da BLUE"
+            class="logo"
+        >
 
-    <input
-        type="password"
-        id="senha"
-        placeholder="Senha"
-        autocomplete="current-password"
-    >
+        <h1>BLUE</h1>
 
-    <button onclick="login()">Entrar</button>
+        <h3>Dê voz ao conhecimento</h3>
 
-    <p onclick="cadastro()" class="cadastro">
-        Não tem conta? Cadastre-se
-    </p>
+        <input
+            type="text"
+            id="usuario"
+            placeholder="Usuário"
+            autocomplete="username"
+        >
 
-</div>
+        <input
+            type="password"
+            id="senha"
+            placeholder="Senha"
+            autocomplete="current-password"
+        >
 
-<script src="script.js"></script>
+        <button onclick="login()">Entrar</button>
+
+        <p onclick="cadastro()" class="cadastro">
+            Não tem conta? Cadastre-se
+        </p>
+
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
